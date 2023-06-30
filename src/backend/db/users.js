@@ -16,7 +16,7 @@ export const users = [
   //   updatedAt: formatDate(),
   // },
   {
-    _id:uuid(),
+    _id:"bccae612-477d-425a-ad91-c6f2e272b6b4",
     name:"Bijaylaxmi Behera",
     username:"bijaylaxmi567",
     password:"bijaylaxmi@098",
@@ -45,7 +45,7 @@ export const users = [
     updatedAt: formatDate(),
   },
   {
-    _id:uuid(),
+    _id:"25b84284-e623-403f-b6d4-baad482df4dd",
     name:"Scarlett Hill",
     username:"scarlett",
     password:"scarlett",
@@ -60,7 +60,7 @@ export const users = [
     updatedAt: formatDate(),
   },
   {
-    _id:uuid(),
+    _id:"70fbd7c8-33f9-478e-9c38-4a285a430321",
     name:"Aurora Wright",
     username:"aurora",
     password:"aurora",
@@ -75,7 +75,7 @@ export const users = [
     updatedAt: formatDate(),
   },
   {
-    _id:uuid(),
+    _id:"578092d3-745a-43ac-839a-1146d237174b",
     name:"Lily Baker",
     username:"sunshine",
     password:"lily",
@@ -90,7 +90,7 @@ export const users = [
     updatedAt: formatDate(),
   },
   {
-    _id:uuid(),
+    _id:"aeea02dd-d966-4c51-a2de-54d94ad0d2a5",
     name:"Harry Walker",
     username:"harry",
     password:"harry",
@@ -105,7 +105,7 @@ export const users = [
     updatedAt: formatDate(),
   },
   {
-    _id:uuid(),
+    _id:"8c86e34b-87a5-4198-8efd-2f7da11040ea",
     name:"John Doe",
     username:"john",
     password:"john",
