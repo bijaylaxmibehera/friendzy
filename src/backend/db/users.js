@@ -1,5 +1,5 @@
-import { v4 as uuid } from "uuid";
-import { formatDate } from "../utils/authUtils";
+import { v4 as uuid } from 'uuid'
+import { formatDate } from '../utils/authUtils'
 /**
  * User Database can be added here.
  * You can add default users of your wish with different attributes
@@ -16,107 +16,404 @@ export const users = [
   //   updatedAt: formatDate(),
   // },
   {
-    _id:"bccae612-477d-425a-ad91-c6f2e272b6b4",
-    name:"Bijaylaxmi Behera",
-    username:"bijaylaxmi567",
-    password:"bijaylaxmi@098",
-    followers:[
+    _id: 'bccae612-477d-425a-ad91-c6f2e272b6b4',
+    firstName: 'Bijaylaxmi',
+    lastName: 'Behera',
+    username: 'bijaylaxmi567',
+    password: 'bijaylaxmi@098',
+    website: 'https://bijaylaxmi-behera-portfolio.netlify.app/',
+    profileAvatar:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg',
+    cover:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg',
+    bio: 'web developer',
+    location: 'India',
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+    followers: [
       {
-        _id:uuid(),
-        name:"Isabella Anderson",
-        username:"isabella",
-        avatar:"https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
-    following:[
+    following: [
       {
-      _id:uuid(),
-      name:"Sophia Johnson",
-      username:"sophia",
-      avatar:"https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    }
+        _id: uuid(),
+        firstName: 'Sophia',
+        lastName: 'Johnson',
+        username: 'sophia',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/sophia.jpg'
+      }
     ],
-    avatar:"https://avatars.githubusercontent.com/u/72284560?s=96&v=4",
-    cover:"",
-    bio:"web developer",
-    location:"India",
-    website:"https://bijaylaxmi-behera-portfolio.netlify.app/",
-    createdAt: formatDate(),
-    updatedAt: formatDate(),
+    bookmark: []
   },
   {
-    _id:"25b84284-e623-403f-b6d4-baad482df4dd",
-    name:"Scarlett Hill",
-    username:"scarlett",
-    password:"scarlett",
-    followers:[],
-    following:[],
-    avatar:"https://images.pexels.com/photos/1116380/pexels-photo-1116380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    cover:"",
-    bio:"Software developer",
-    location:"USA",
-    website:"https://scarlett.netlify.app/",
+    _id: '25b84284-e623-403f-b6d4-baad482df4dd',
+    firstName: 'Scarlett',
+    lastName: 'Hill',
+    username: 'scarlett',
+    password: 'scarlett',
+    website: 'https://scarlett.netlify.app/',
+    profileAvatar:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/Scarlett.jpg',
+    cover:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/Scarlett.jpg',
+    bio: 'Software developer',
+    location: 'USA',
     createdAt: formatDate(),
     updatedAt: formatDate(),
+    followers: [
+      {
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+      }
+    ],
+    following: [
+      {
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+      }
+    ],
+    bookmark: []
   },
   {
-    _id:"70fbd7c8-33f9-478e-9c38-4a285a430321",
-    name:"Aurora Wright",
-    username:"aurora",
-    password:"aurora",
-    followers:[],
-    following:[],
-    avatar:"https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    cover:"",
-    bio:"Poet",
-    location:"Europe",
-    website:"https://aurora.netlify.app/",
+    _id: '70fbd7c8-33f9-478e-9c38-4a285a430321',
+    firstName: 'Aurora',
+    lastName: 'Wright',
+    username: 'aurora',
+    password: 'aurora',
+    website: 'https://aurora.netlify.app/',
+    profileAvatar:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/aurora.jpg',
+    cover:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/aurora.jpg',
+    bio: 'Poet',
+    location: 'Europe',
     createdAt: formatDate(),
     updatedAt: formatDate(),
+    followers: [
+      {
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+      }
+    ],
+    following: [
+      {
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+      }
+    ],
+    bookmark: []
   },
   {
-    _id:"578092d3-745a-43ac-839a-1146d237174b",
-    name:"Lily Baker",
-    username:"sunshine",
-    password:"lily",
-    followers:[],
-    following:[],
-    avatar:"https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    cover:"",
-    bio:"Product Manager",
-    location:"India",
-    website:"https://lily.netlify.app/",
+    _id: '578092d3-745a-43ac-839a-1146d237174b',
+    firstName: 'Lily',
+    lastName: 'Baker',
+    username: 'sunshine',
+    password: 'lily',
+    website: 'https://lily.netlify.app/',
+    profileAvatar:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/lily.jpg',
+    cover:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/lily.jpg',
+    bio: 'Product Manager',
+    location: 'India',
     createdAt: formatDate(),
     updatedAt: formatDate(),
+    followers: [
+      {
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+      }
+    ],
+    following: [
+      {
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+      }
+    ],
+    bookmark: []
   },
   {
-    _id:"aeea02dd-d966-4c51-a2de-54d94ad0d2a5",
-    name:"Harry Walker",
-    username:"harry",
-    password:"harry",
-    followers:[],
-    following:[],
-    avatar:"https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    cover:"",
-    bio:"Photographer",
-    location:"India",
-    website:"",
+    _id: 'aeea02dd-d966-4c51-a2de-54d94ad0d2a5',
+    firstName: 'Harry',
+    lastName: 'Walker',
+    username: 'harry',
+    password: 'harry',
+    website: '',
+
+    profileAvatar:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/harry.jpg',
+    cover:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/harry.jpg',
+    bio: 'Photographer',
+    location: 'India',
+
     createdAt: formatDate(),
     updatedAt: formatDate(),
+    followers: [
+      {
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+      }
+    ],
+    following: [
+      {
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+      }
+    ],
+    bookmark: []
   },
   {
-    _id:"8c86e34b-87a5-4198-8efd-2f7da11040ea",
-    name:"John Doe",
-    username:"john",
-    password:"john",
-    followers:[],
-    following:[],
-    avatar:"https://images.pexels.com/photos/769745/pexels-photo-769745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    cover:"",
-    bio:"Software developer",
-    location:"USA",
-    website:"",
+    _id: '8c86e34b-87a5-4198-8efd-2f7da11040ea',
+    firstName: 'John',
+    lastName: 'Doe',
+    username: 'john',
+    password: 'john',
+    website: '',
+    profileAvatar:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/john.jpg',
+    cover:
+      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/john.jpg',
+    bio: 'Software developer',
+    location: 'USA',
+
     createdAt: formatDate(),
     updatedAt: formatDate(),
-  },
-];
+    followers: [
+      {
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+      }
+    ],
+    following: [
+      {
+        _id: uuid(),
+        firstName: 'Isabella',
+        lastName: 'Anderson',
+        username: 'isabella',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Subhalaxmi',
+        lastName: 'Behera',
+        username: 'subhalaxmi',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+      },
+      {
+        _id: uuid(),
+        firstName: 'Neha',
+        lastName: 'Sharma',
+        username: 'neha',
+        profileAvatar:
+          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+      }
+    ],
+    bookmark: []
+  }
+]
