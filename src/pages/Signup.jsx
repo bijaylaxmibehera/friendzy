@@ -21,7 +21,7 @@ export function Signup() {
 
   useEffect(() => {
     if (token) {
-      navigate("/home");
+      navigate("/login");
     }
   }, [token, navigate]);
 

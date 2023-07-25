@@ -8,7 +8,7 @@ import {
 import { initialState, userReducer } from "../reducer/usersReducer";
 import { getAllUsersService } from "../services/UserService";
 
-export const UserConext = createContext({
+const UserConext = createContext({
   users: [],
   bookmarks: [],
   user: {},

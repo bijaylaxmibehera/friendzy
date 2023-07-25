@@ -9,18 +9,17 @@ export function Home() {
       <div>
         <NavBar />
       </div>
-      <div className="grid grid-cols-3 gap-16 p-16">
-      <div className="col-span-1">
+      <div className="grid grid-cols-4 gap-2 pt-16 pl-3">
+        <div className="col-span-1 w-1/5">
           <LeftNav className="h-screen fixed top-0 left-0" />
         </div>
 
-        <div className="col-span-1">
+        <div className="col-span-2 border-x-2 border-black min-h-screen">
           <CreatePost />
-         
         </div>
 
-        <div className="col-span-1">
-          <RightNav className="w-1/4" />
+        <div className="col-span-1 w-1/5">
+          <RightNav />
         </div>
       </div>
     </>
