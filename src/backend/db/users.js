@@ -19,7 +19,7 @@ export const users = [
     _id: 'bccae612-477d-425a-ad91-c6f2e272b6b4',
     firstName: 'Bijaylaxmi',
     lastName: 'Behera',
-    username: 'bijaylaxmi567',
+    username: 'bijaylaxmi',
     password: 'bijaylaxmi@098',
     website: 'https://bijaylaxmi-behera-portfolio.netlify.app/',
     profileAvatar:
