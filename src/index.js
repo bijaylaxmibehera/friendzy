@@ -5,21 +5,27 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { makeServer } from './server'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 
-import { AuthContext, AuthProvider } from './context/AuthContext'
+import { AuthProvider } from './context/AuthContext'
+import { PostProvider } from './context/PostContext'
+import { UserProvider } from './context/UserContext'
 
 // Call make Server
 makeServer()
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-export { AuthContext }
-
 root.render(
   <React.StrictMode>
     <Router>
       <AuthProvider>
-        <App />
+        <UserProvider>
+          <PostProvider>
+            <App />
+            <ToastContainer />
+          </PostProvider>
+        </UserProvider>
       </AuthProvider>
     </Router>
   </React.StrictMode>
