@@ -33,9 +33,9 @@ export const users = [
     followers: [
       {
         _id: uuid(),
-        firstName: 'Isabella',
-        lastName: 'Anderson',
-        username: 'isabella',
+        firstName: 'Suman',
+        lastName: 'Mishra',
+        username: 'suman',
         profileAvatar:
           'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
@@ -49,12 +49,13 @@ export const users = [
       },
       {
         _id: uuid(),
-        firstName: 'Neha',
+        firstName: 'Shruti',
         lastName: 'Sharma',
-        username: 'neha',
+        username: 'shruti',
         profileAvatar:
           'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
+      
     ],
     following: [
       {
@@ -70,9 +71,9 @@ export const users = [
   },
   {
     _id: '25b84284-e623-403f-b6d4-baad482df4dd',
-    firstName: 'Scarlett',
-    lastName: 'Hill',
-    username: 'scarlett',
+    firstName: 'Suman',
+    lastName: 'Mishra',
+    username: 'suman',
     password: 'scarlett',
     website: 'https://scarlett.netlify.app/',
     profileAvatar:
@@ -112,9 +113,9 @@ export const users = [
     following: [
       {
         _id: uuid(),
-        firstName: 'Isabella',
-        lastName: 'Anderson',
-        username: 'isabella',
+        firstName: 'Shruti',
+        lastName: 'Sharma',
+        username: 'shruti',
         profileAvatar:
           'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
@@ -139,9 +140,9 @@ export const users = [
   },
   {
     _id: '70fbd7c8-33f9-478e-9c38-4a285a430321',
-    firstName: 'Aurora',
-    lastName: 'Wright',
-    username: 'aurora',
+    firstName: 'Shruti',
+    lastName: 'Sharma',
+    username: 'shruti',
     password: 'aurora',
     website: 'https://aurora.netlify.app/',
     profileAvatar:

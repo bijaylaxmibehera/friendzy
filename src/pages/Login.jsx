@@ -17,7 +17,7 @@ export function Login() {
 
   useEffect(() => {
     if (token) {
-      navigate("/home");
+      navigate("/");
     }
   }, [token, navigate]);
 

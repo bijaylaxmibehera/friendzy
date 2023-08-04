@@ -1,26 +1,39 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 
 export function LeftNav() {
   const { user } = useAuth();
+  
 
   const { firstName, lastName, username, profileAvatar } = user;
+
+  const getStyle=({isActive})=>(
+    {
+      backgroundColor: isActive ? "#ef4444" : "",
+      color:isActive ? "#f9fafb" : "",
+      fontWeight: isActive ? "bold":"",
+      borderRadius:isActive? "10px":""
+    }
+  )
+
   return (
     <>
       <div className="md:h-[80vh] md:w-48 flex flex-col justify-between fixed">
         <div className="top">
           <NavLink
-            className="py-4 cursor-pointer md:px-5 md:py-2 xs:px-2  pl-10 xl:pl-5 md:text-xs flex  items-center hover:text-white hover:bg-red-500 hover:rounded-xl"
-            to="/home"
+            className="py-4 cursor-pointer md:px-5 md:py-2 xs:px-2  pl-10 xl:pl-5 md:text-xs flex  items-center hover:text-red-500"
+            to="/"
+            style={getStyle}
           >
             <i class="fa fa-home md:text-base w-[22px]" aria-hidden="true"></i>
 
             <span className="font-medium md:block text-base ">Home</span>
           </NavLink>
           <NavLink
-            className="flex items-center  py-4 cursor-pointer md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-white hover:bg-red-500 hover:rounded-xl"
+            className="flex items-center  py-4 cursor-pointer md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-red-500"
             to="/explore"
+            style={getStyle}
           >
             <i
               class="fa fa-compass md:text-base w-[22px]"
@@ -30,8 +43,9 @@ export function LeftNav() {
             <span className="font-medium md:block text-base">Explore</span>
           </NavLink>
           <NavLink
-            className=" flex  items-center py-4 cursor-pointer md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-white hover:bg-red-500 hover:rounded-xl"
+            className=" flex  items-center py-4 cursor-pointer md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-red-500"
             to="/bookmark"
+            style={getStyle}
           >
             <i
               class="fa fa-bookmark-o md:text-base w-[25px]"
@@ -40,8 +54,9 @@ export function LeftNav() {
             <span className="font-medium md:block text-base">Bookmarks </span>
           </NavLink>
           <NavLink
-            className="flex   items-center py-4 cursor-pointer md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-white hover:bg-red-500 hover:rounded-xl"
-            to="/profile"
+            className="flex   items-center py-4 cursor-pointer md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-red-500"
+            to={`/profile/${user?.username}`}
+            style={getStyle}
           >
             <i
               class="fa fa-user-o md:text-base w-[25px]"
@@ -49,7 +64,7 @@ export function LeftNav() {
             ></i>
             <span className="font-medium md:block text-base">Profile</span>
           </NavLink>
-          <p className=" py-4 cursor-pointer flex  items-center md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-white hover:bg-red-500 hover:rounded-xl">
+          <p className=" py-4 cursor-pointer flex  items-center md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-red-500">
             <i class="fa fa-plus md:base" aria-hidden="true"></i>
             <span className="ml-3 font-medium md:block text-base">
               Create Post

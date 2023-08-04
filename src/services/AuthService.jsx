@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-export const logoutUser = (setToken, setUser, setLoader) => {
+export const logoutUser = (setToken, setUser,setLoader) => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     setToken(null);

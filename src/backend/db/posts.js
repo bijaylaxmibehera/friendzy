@@ -74,7 +74,11 @@ export const posts = [
       ]
     },
     dislikedBy: [],
+    firstName: 'Bijaylaxmi',
+    lastName: 'Behera',
     username: 'bijaylaxmi',
+    profileAvatar:
+    'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg',
     createdAt: formatDate(),
     updatedAt: formatDate(),
     comments: [
@@ -115,7 +119,11 @@ export const posts = [
       ]
     },
     dislikedBy: [],
+    firstName: 'Shruti',
+    lastName: 'Sharma',
     username: 'shruti',
+    profileAvatar:
+    'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/aurora.jpg',
     createdAt: formatDate(),
     updatedAt: formatDate(),
     comments: [
@@ -141,7 +149,11 @@ export const posts = [
       likedBy: []
     },
     dislikedBy: [],
+    firstName: 'Suman',
+    lastName: 'Mishra',
     username: 'suman',
+    profileAvatar:
+    'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/Scarlett.jpg',
     createdAt: formatDate(),
     updatedAt: formatDate(),
     comments: []

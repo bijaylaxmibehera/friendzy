@@ -1,4 +1,10 @@
-import { createContext, useContext, useState,useReducer,useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useReducer,
+  useEffect,
+} from "react";
 import { initialState, postReducer } from "../reducer/postReducer";
 import { getAllPostsService } from "../services/PostServices";
 
@@ -13,6 +19,7 @@ export const PostContext = createContext({
 export function PostProvider({ children }) {
   const [state, dispatch] = useReducer(postReducer, initialState);
   const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     getAllPostsService(dispatch, setIsLoading);
@@ -27,6 +34,8 @@ export function PostProvider({ children }) {
           postDispatch: dispatch,
           isLoading,
           setIsLoading,
+          showModal,
+          setShowModal,
         }}
       >
         {children}
@@ -35,4 +44,4 @@ export function PostProvider({ children }) {
   );
 }
 
-export const usePost=()=>useContext(PostContext)
+export const usePost = () => useContext(PostContext);
