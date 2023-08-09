@@ -15,8 +15,10 @@ import {
   removePostFromBookmarkService,
 } from "../services/UserService";
 
+
 export function PostCard({ post }) {
   const {
+    _id,
     content,
     mediaUrl,
     likes,
@@ -30,8 +32,9 @@ export function PostCard({ post }) {
 
   const { users, bookmarks, userDispatch } = useUser();
   const { user: authUser, token } = useAuth();
-  const { postDispatch } = usePost();
+  const { postDispatch,setShowModal } = usePost();
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
+  const [showServices, setshowServices] = useState(false);
 
   const user = users.find((user) => user?.username === post?.username);
 
@@ -42,25 +45,33 @@ export function PostCard({ post }) {
   const isLiked = post?.likes?.likedBy?.some(({ _id }) => _id === authUser._id);
 
   const [isBookmarkedActive, setIsBookMarkedActive] = useState(false);
+
+  const likeHandler = () => {
+    // if (isLiked) {
+    //   unlikePostService(postDispatch, setIsBtnDisabled, token,_id);
+    // } else {
+    //   likePostService(postDispatch, setIsBtnDisabled, token, _id);
+    // }
+  };
+
   const bookmarkHandler = () => {
     if (isBookmarked) {
-      removePostFromBookmarkService(
-        userDispatch,
-        setIsBtnDisabled,
-        token,
-        post._id
-      );
-      setIsBookMarkedActive(false)
+      removePostFromBookmarkService(userDispatch, setIsBtnDisabled, token, _id);
+      setIsBookMarkedActive(false);
     } else {
-      addPostToBookmarkService(userDispatch, setIsBtnDisabled, token, post._id);
-      setIsBookMarkedActive(true)
+      addPostToBookmarkService(userDispatch, setIsBtnDisabled, token, _id);
+      setIsBookMarkedActive(true);
     }
     // setIsBookMarkedActive(!isBookmarkedActive);
   };
 
+
+  const handleDelete=()=>{
+    deletePostService(postDispatch, setIsBtnDisabled, token, _id)
+  }
   return (
     <>
-      <div className="p-4">
+      <div className="p-4  relative">
         <div className="flex">
           <img
             src={profileAvatar}
@@ -80,7 +91,10 @@ export function PostCard({ post }) {
             <p class="text-sm text-slate-500 truncate">@{username}</p>
           </div>
           {isPostCreator && (
-            <div className="grow text-right">
+            <div
+              className="grow text-right"
+              onClick={() => setshowServices(!showServices)}
+            >
               <button>
                 <i
                   className="fa fa-ellipsis-h text-slate-400"
@@ -88,6 +102,17 @@ export function PostCard({ post }) {
                 ></i>
               </button>
             </div>
+          )}
+          {showServices && (
+            <ul className="absolute bg-white shadow-lg right-10 top-10 text-left list-none py-4 px-6 rounded-md gap-4  cursor-pointer">
+              <li className="flex items-center gap-2 hover:text-red-500">
+                <i className="fa fa-pencil-square-o" aria-hidden="true"></i>Edit
+              </li>
+              
+              <li className="flex items-center gap-3 text-red-500" onClick={handleDelete}>
+                <i class="fa fa-trash" aria-hidden="true"></i>Delete
+              </li>
+            </ul>
           )}
         </div>
         <div className="mt-3">
@@ -108,11 +133,16 @@ export function PostCard({ post }) {
         </div>
         <hr className="my-4 border-t-2" />
         <div className="flex items-center gap-4">
-          <button>
-            <i className="fa fa-heart-o mr-2" aria-hidden="true"></i>
+          <button onClick={() => likeHandler()} isDisabled={isBtnDisabled}>
+            {isLiked ? (
+              <i className="fa fa-heart mr-2" aria-hidden="true"></i>
+            ) : (
+              <i className="fa fa-heart-o mr-2" aria-hidden="true"></i>
+            )}
+
             {likes.likeCount}
           </button>
-          
+
           <button onClick={() => bookmarkHandler()}>
             {isBookmarkedActive ? (
               <i className="fa fa-bookmark" aria-hidden="true"></i>

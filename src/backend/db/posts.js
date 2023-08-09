@@ -47,16 +47,16 @@ export const posts = [
     mediaUrl: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,h_300,w_500/peacock_1.jpg',
     altText: 'peacock',
     likes: {
-      likeCount: 3,
+      likeCount: 2,
       likedBy: [
-        {
-          _id:"4276529e-210a-44bf-a18e-c94f7263ac7e",
-          firstName: 'Bijaylaxmi',
-          lastName: 'Behera',
-          username: 'bijaylaxmi',
-          profileAvatar:'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg'
+        // {
+        //   _id:"4276529e-210a-44bf-a18e-c94f7263ac7e",
+        //   firstName: 'Bijaylaxmi',
+        //   lastName: 'Behera',
+        //   username: 'bijaylaxmi',
+        //   profileAvatar:'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg'
         
-        },
+        // },
         {
           _id:"20957116-42e9-49d7-9112-9cd547addbba",
           firstName:'Subhalaxmi',

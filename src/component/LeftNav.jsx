@@ -1,9 +1,11 @@
 import { NavLink, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
+import { usePost } from "../context/PostContext";
 
 export function LeftNav() {
   const { user } = useAuth();
+  const {setShowModal}=usePost();
   
 
   const { firstName, lastName, username, profileAvatar } = user;
@@ -64,7 +66,7 @@ export function LeftNav() {
             ></i>
             <span className="font-medium md:block text-base">Profile</span>
           </NavLink>
-          <p className=" py-4 cursor-pointer flex  items-center md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-red-500">
+          <p className=" py-4 cursor-pointer flex  items-center md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-red-500" role="button" onClick={()=>setShowModal(true)}>
             <i class="fa fa-plus md:base" aria-hidden="true"></i>
             <span className="ml-3 font-medium md:block text-base">
               Create Post

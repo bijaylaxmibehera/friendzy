@@ -6,12 +6,11 @@ import { RightNav } from "../component/RightNav";
 import { usePost } from "../context/PostContext";
 import { useAuth } from "../context/AuthContext";
 import { PostCard } from "../component/PostCard";
+import { CreatePost } from "../component/CreatePost";
 
 export function Home() {
-  const { isLoading, setShowModal, posts, postDispatch } = usePost();
+  const { isLoading,posts } = usePost();
   const { user } = useAuth();
-
-  const { firstName, username, profileAvatar } = user;
 
   const userFeed = posts?.filter((post) => {
     return (
@@ -19,7 +18,7 @@ export function Home() {
       user?.following?.some(({ username }) => username === post.username)
     );
   });
-
+ 
   return (
     <>
       {isLoading ? (
@@ -35,29 +34,9 @@ export function Home() {
             <div className="col-span-1">
               <LeftNav className="h-screen fixed top-0 left-0" />
             </div>
-            <div className="col-span-3 border-x-2 border-black min-h-screen">
+            <div className="col-span-3 border-x-2 border-black min-h-screen overflow-y">
               <h1 className="font-bold text-2xl text-center my-4">Home</h1>
-              <Card>
-                <div className="flex items-center gap-3 p-3">
-                  <img
-                    src={profileAvatar}
-                    alt={username}
-                    className="h-[40px] w-[40px]"
-                  />
-                  <h2 className="text-slate-500 font-[500] text-xl">
-                    What's happening {firstName}?
-                  </h2>
-                  <button
-                    className="grow text-right"
-                    onClick={() => setShowModal(true)}
-                  >
-                    <i
-                      className="fa fa-plus md:base text-white bg-red-500 px-3 py-2 rounded-full"
-                      aria-hidden="true"
-                    ></i>
-                  </button>
-                </div>
-              </Card>
+              <CreatePost />
               {userFeed.map((userFeedPosts) => (
                 <Card>
                   <PostCard post={userFeedPosts} key={userFeedPosts._id} />
