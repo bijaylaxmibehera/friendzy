@@ -52,13 +52,12 @@ export const uploadMedia = async (media, setPostData) => {
       process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET
     );
     data.append("cloud_name", process.env.REACT_APP_CLOUDINARY_CLOUD_NAME);
-    data.append("folder", process.env.REACT_APP_CLOUDINARY_FOLDER_NAME);
+    // data.append("folder", process.env.REACT_APP_CLOUDINARY_FOLDER_NAME);
     const requestOptions = {
       method: "POST",
       body: data,
     };
 
-    // let url = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`;
     let url = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`
     if (mediaType === "video") {
       url = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/video/upload`;
@@ -75,3 +74,20 @@ export const uploadMedia = async (media, setPostData) => {
       });
   }
 };
+
+export const getPostsBySortingType = (allPosts, sortBy) => {
+
+	if (sortBy === "Latest") {
+		return [...allPosts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+	}
+
+	if (sortBy === "Oldest") {
+		return [...allPosts].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+	}
+
+	if (sortBy === "Trending") {
+		return [...allPosts].sort((a, b) => b.likes.likeCount - a.likes.likeCount);
+	}
+
+	return allPosts;
+}

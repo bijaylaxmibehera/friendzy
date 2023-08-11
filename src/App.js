@@ -23,7 +23,7 @@ function App () {
           <Route path='/' element={<Home />} />
           <Route path='/explore' element={<Explore />} />
           <Route path='/bookmark' element={<Bookmark />} />
-          <Route path='/profile/:userName' element={<Profile />} />
+          <Route path='/profile/:username' element={<Profile />} />
         </Route>
       </Routes>
     </div>

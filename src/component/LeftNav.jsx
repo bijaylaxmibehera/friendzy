@@ -2,11 +2,12 @@ import { NavLink, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { usePost } from "../context/PostContext";
+import { useNavigate } from "react-router-dom";
 
 export function LeftNav() {
   const { user } = useAuth();
   const {setShowModal}=usePost();
-  
+  const navigate=useNavigate();
 
   const { firstName, lastName, username, profileAvatar } = user;
 
@@ -73,7 +74,7 @@ export function LeftNav() {
             </span>
           </p>
         </div>
-        <div className="border-2 border-slate-300 rounded-xl hover:bg-slate-200 cursor-pointer">
+        <div className="border-2 border-slate-300 rounded-xl hover:bg-slate-200 cursor-pointer" onClick={()=>navigate(`/profile/${username}`)}>
           <div className="flex gap-2 items-center pt-3 pb-3 pl-1">
             <img
               src={profileAvatar}

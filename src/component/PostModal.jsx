@@ -7,6 +7,7 @@ import { createPostService, editPostService } from "../services/PostServices";
 import { uploadMedia } from "../utils/utilityFunctions";
 import { useAuth } from "../context/AuthContext";
 import { usePost } from "../context/PostContext";
+import axios from "axios";
 
 export function PostModal() {
   const { showModal, setShowModal, postDispatch } = usePost();
@@ -41,7 +42,6 @@ export function PostModal() {
     setShowEmoji(false);
   };
 
-  console.log(postData);
   return (
     <>
       <Modal
