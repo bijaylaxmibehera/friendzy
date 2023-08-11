@@ -67,12 +67,12 @@ export function LeftNav() {
             ></i>
             <span className="font-medium md:block text-base">Profile</span>
           </NavLink>
-          <p className=" py-4 cursor-pointer flex  items-center md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-red-500" role="button" onClick={()=>setShowModal(true)}>
+          <button className=" py-4 cursor-pointer flex  items-center md:py-2 md:px-5 xs:px-2  pl-10 xl:pl-5 md:text-xs hover:text-red-500" onClick={()=>setShowModal(true)}>
             <i class="fa fa-plus md:base" aria-hidden="true"></i>
             <span className="ml-3 font-medium md:block text-base">
               Create Post
             </span>
-          </p>
+          </button>
         </div>
         <div className="border-2 border-slate-300 rounded-xl hover:bg-slate-200 cursor-pointer" onClick={()=>navigate(`/profile/${username}`)}>
           <div className="flex gap-2 items-center pt-3 pb-3 pl-1">

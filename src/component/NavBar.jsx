@@ -12,7 +12,7 @@ export function NavBar() {
 
   return (
     <>
-      <nav className="bg-slate-100 fixed w-screen flex justify-between items-center h-14  pl-12 pr-12">
+      <nav className="bg-slate-100 fixed w-screen flex justify-between items-center h-14  pl-12 pr-12 z-[100]">
         <h1 className="text-3xl  font-bold italic  sm:text-center lg:text-left">
           friend<span className="text-red-600">zy</span>
         </h1>
