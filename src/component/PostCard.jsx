@@ -80,14 +80,14 @@ export function PostCard({ post }) {
           {isUserOnProfilePage ? (
             <>
               <img
-                src={profileAvatar}
+                src={user.profileAvatar}
                 alt={username}
                 className="w-[40px] h-[40px] rounded-full"
               />
               <div class="ml-3 overflow-hidden">
                 <div className="flex gap-3 items-center">
                   <p class="text-sm font-medium text-slate-900">
-                    {firstName} {lastName}
+                    {user.firstName} {user.lastName}
                   </p>
                   <span className="text-sm text-slate-400">
                     {getTimeAndDate(post?.createdAt)}
@@ -100,14 +100,14 @@ export function PostCard({ post }) {
           ) : (
             <Link to={`profile/${username}`} className="flex">
               <img
-                src={profileAvatar}
+                src={user.profileAvatar}
                 alt={username}
                 className="w-[40px] h-[40px] rounded-full"
               />
               <div class="ml-3 overflow-hidden">
                 <div className="flex gap-3 items-center">
                   <p class="text-sm font-medium text-slate-900">
-                    {firstName} {lastName}
+                    {user.firstName} {user.lastName}
                   </p>
                   <span className="text-sm text-slate-400">
                     {getTimeAndDate(post?.createdAt)}
