@@ -49,18 +49,18 @@ export const uploadMedia = async (media, setPostData) => {
     data.append("file", media);
     data.append(
       "upload_preset",
-      process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET
+     "chatapp"
     );
-    data.append("cloud_name", process.env.REACT_APP_CLOUDINARY_CLOUD_NAME);
+    data.append("cloud_name","bijaylaxmi");
     // data.append("folder", process.env.REACT_APP_CLOUDINARY_FOLDER_NAME);
     const requestOptions = {
       method: "POST",
       body: data,
     };
 
-    let url = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`
+    let url = `https://api.cloudinary.com/v1_1/bijaylaxmi/image/upload`
     if (mediaType === "video") {
-      url = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/video/upload`;
+      url = `https://api.cloudinary.com/v1_1/bijaylaxmi/video/upload`;
     }
     await fetch(url, requestOptions)
       .then((response) => response.json())
@@ -74,6 +74,42 @@ export const uploadMedia = async (media, setPostData) => {
       });
   }
 };
+// export const uploadMedia = async (media, setPostData) => {
+//   const mediaType = media.type.split("/")[0];
+//   if (mediaType === "video" && Math.round(media.size / 1024000) > 10) {
+//     toast.error(`Video size should be less than 10MB`);
+//   } else if (Math.round(media.size / 1024000) > 4) {
+//     toast.error(`Image/GIF size should be less than 4MB`);
+//   } else {
+//     const data = new FormData();
+//     data.append("file", media);
+//     data.append(
+//       "upload_preset",
+//       process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET
+//     );
+//     data.append("cloud_name", process.env.REACT_APP_CLOUDINARY_CLOUD_NAME);
+//     // data.append("folder", process.env.REACT_APP_CLOUDINARY_FOLDER_NAME);
+//     const requestOptions = {
+//       method: "POST",
+//       body: data,
+//     };
+
+//     let url = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`
+//     if (mediaType === "video") {
+//       url = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/video/upload`;
+//     }
+//     await fetch(url, requestOptions)
+//       .then((response) => response.json())
+//       .then((json) => {
+//         setPostData((prev) => ({ ...prev, mediaURL: json.url }));
+//         return [json.secure_url];
+//       })
+//       .catch((error) => {
+//         console.error(`uploadMedia: error while uploading a media`, error);
+//         toast.error("Uploading a media failed!");
+//       });
+//   }
+// };
 
 export const getPostsBySortingType = (allPosts, sortBy) => {
 

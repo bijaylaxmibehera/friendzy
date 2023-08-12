@@ -44,7 +44,7 @@ export const posts = [
   {
     _id:"998197f6-0f0a-490f-b10e-b93607e00974",
     content: 'Peacock❤️',
-    mediaUrl: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,h_300,w_500/peacock_1.jpg',
+    mediaURL: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,h_300,w_500/peacock_1.jpg',
     altText: 'peacock',
     likes: {
       likeCount: 2,
@@ -97,7 +97,7 @@ export const posts = [
   {
     _id:"c77a4756-8b87-4645-a86e-715f3e1c7005",
     content:" 🎉🖥️ Guess what, fam? I've got some exciting news to share! 🎉 Just unboxed my brand new laptop, and I'm absolutely thrilled! 💻✨🙌 This sleek and powerful machine ticks all the boxes on my wish list. It's got the speed, the storage, and the graphics to handle anything I throw at it! From work to play, this laptop is going to be my new best buddy. 🤩",
-    mediaUrl: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_scale,h_530,w_700/macbook.jpg',
+    mediaURL: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_scale,h_530,w_700/macbook.jpg',
     altText: 'macbook',
     likes: {
       likeCount: 2,
@@ -142,7 +142,7 @@ export const posts = [
   {
     _id:"29a1c8b6-bd5e-4b2e-a778-4773a449051c",
     content: '"Embrace the journey of learning, for it is the path that leads to growth and discovery." ✨🌱',
-    mediaUrl: '',
+    mediaURL: '',
     altText: '',
     likes: {
       likeCount: 0,

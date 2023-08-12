@@ -1,13 +1,14 @@
 import { logoutUser } from "../services/AuthService";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
+import { SearchBox } from "./SearchBox";
 
 export function NavBar() {
   const { setToken, setUser } = useAuth();
-  const [loader,setLoader]=useState(false);
+  const [loader, setLoader] = useState(false);
 
   const handleLogout = () => {
-    logoutUser(setToken, setUser,setLoader);
+    logoutUser(setToken, setUser, setLoader);
   };
 
   return (
@@ -16,6 +17,10 @@ export function NavBar() {
         <h1 className="text-3xl  font-bold italic  sm:text-center lg:text-left">
           friend<span className="text-red-600">zy</span>
         </h1>
+        <div>
+          <SearchBox />
+        </div>
+
         <button
           className="bg-red-500 text-white rounded-md pl-3 pr-3 pt-1 pb-1 font-medium"
           onClick={handleLogout}

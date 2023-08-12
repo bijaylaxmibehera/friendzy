@@ -7,7 +7,7 @@ import { createPostService, editPostService } from "../services/PostServices";
 import { uploadMedia } from "../utils/utilityFunctions";
 import { useAuth } from "../context/AuthContext";
 import { usePost } from "../context/PostContext";
-import axios from "axios";
+import LoadingSpinner from "./LoadingSpinner";
 
 export function PostModal() {
   const { showModal, setShowModal, postDispatch } = usePost();
@@ -42,12 +42,16 @@ export function PostModal() {
     setShowEmoji(false);
   };
 
+  const handleRemoveMedia = () => {
+    setPostData((prev) => ({ ...prev, mediaURL: "" }));
+  };
+
   return (
     <>
       <Modal
         initialFocusRef={inputFocusRef}
         open={showModal}
-        onClose={() => setShowModal(false)}
+        onClose={cancelPost}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         className="overflow-y-auto"
@@ -58,7 +62,7 @@ export function PostModal() {
           } `}
         >
           <div className="flex justify-between items-center relative">
-            <h2 className="text-2xl font-semibold">Create Post</h2>
+            <h2 className="text-2xl font-semibold">Create post</h2>
             <button
               onClick={cancelPost}
               className="flex justify-center items-center"
@@ -70,8 +74,8 @@ export function PostModal() {
               ></i>
             </button>
           </div>
-          <div>
-            <div className="flex gap-2 items-start my-6 border-y-2 py-8 w-full">
+          <div className="my-6 border-y-2 py-8 w-full">
+            <div className="flex gap-2 items-start">
               <img
                 src={authUser.profileAvatar}
                 alt={authUser.username}
@@ -87,10 +91,17 @@ export function PostModal() {
                 }
               ></textarea>
             </div>
+            {isMediaUploading && <LoadingSpinner />}
             {postData.mediaURL && (
-              <div>
+              <div className="relative">
+                <button
+                  onClick={handleRemoveMedia}
+                  className="text-2xl absolute right-1"
+                >
+                  <i class="fa fa-times-circle" aria-hidden="true"></i>
+                </button>
                 {postData?.mediaURL.split("/")[4] === "image" ? (
-                  <img src={postData?.mediaURL} alt="image" />
+                  <img src={postData?.mediaURL} alt="image"  className="w-[250px] h-[250px]"/>
                 ) : (
                   <video controls>
                     <source
@@ -100,18 +111,17 @@ export function PostModal() {
                     />
                   </video>
                 )}
-                <button>Remove</button>
               </div>
             )}
           </div>
-          <div className="flex items-center gap-3 justify-between">
+          <div className="flex items-center gap-3 justify-between mt-3">
             <div className="flex">
               <i
                 className="fa fa-smile-o text-xl mr-4 cursor-pointer"
                 aria-hidden="true"
                 onClick={() => setShowEmoji(!showEmoji)}
               ></i>
-              <form>
+              <div>
                 <label>
                   <i
                     className="fa fa-picture-o text-xl cursor-pointer"
@@ -124,7 +134,7 @@ export function PostModal() {
                     onChange={handleMediaUpload}
                   />
                 </label>
-              </form>
+              </div>
 
               <div className="relative">
                 {showEmoji && (
@@ -162,7 +172,7 @@ export function PostModal() {
                   disabled={isPostDisabled || isPostContentLimitExceeded}
                   onClick={createPostHandler}
                 >
-                  post
+                 post
                 </button>
               </div>
             </div>

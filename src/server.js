@@ -87,9 +87,14 @@ export function makeServer ({ environment = 'development' } = {}) {
         '/users/unfollow/:followUserId/',
         unfollowUserHandler.bind(this)
       )
+      // this.passthrough(
+      //   `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME.trim()}/video/upload`,
+      //   `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME.trim()}/image/upload`,
+      //   ['post']
+      // )
       this.passthrough(
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/video/upload`,
-        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`,
+        `https://api.cloudinary.com/v1_1/bijaylaxmi/video/upload`,
+        `https://api.cloudinary.com/v1_1/bijaylaxmi/image/upload`,
         ['post']
       )
     }

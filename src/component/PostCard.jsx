@@ -14,13 +14,13 @@ import {
   addPostToBookmarkService,
   removePostFromBookmarkService,
 } from "../services/UserService";
-
+import { PostModal } from "./PostModal";
 
 export function PostCard({ post }) {
   const {
     _id,
     content,
-    mediaUrl,
+    mediaURL,
     likes,
     username,
     createdAt,
@@ -32,7 +32,7 @@ export function PostCard({ post }) {
 
   const { users, bookmarks, userDispatch } = useUser();
   const { user: authUser, token } = useAuth();
-  const { postDispatch,setShowModal } = usePost();
+  const { postDispatch, setShowModal } = usePost();
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
   const [showServices, setshowServices] = useState(false);
 
@@ -65,10 +65,9 @@ export function PostCard({ post }) {
     // setIsBookMarkedActive(!isBookmarkedActive);
   };
 
-
-  const handleDelete=()=>{
-    deletePostService(postDispatch, setIsBtnDisabled, token, _id)
-  }
+  const handleDelete = () => {
+    deletePostService(postDispatch, setIsBtnDisabled, token, _id);
+  };
   return (
     <>
       <div className="p-4  relative">
@@ -95,7 +94,7 @@ export function PostCard({ post }) {
               className="grow text-right"
               onClick={() => setshowServices(!showServices)}
             >
-              <button>
+              <button className=" hover:bg-slate-200 hover:rounded-full px-3 py-1">
                 <i
                   className="fa fa-ellipsis-h text-slate-400"
                   aria-hidden="true"
@@ -104,12 +103,15 @@ export function PostCard({ post }) {
             </div>
           )}
           {showServices && (
-            <ul className="absolute bg-white shadow-lg right-10 top-10 text-left list-none py-4 px-6 rounded-md gap-4  cursor-pointer">
+            <ul className="absolute bg-white shadow-lg right-10 top-10 text-left list-none py-4 px-6 rounded-md gap-4  cursor-pointer ">
               <li className="flex items-center gap-2 hover:text-red-500">
                 <i className="fa fa-pencil-square-o" aria-hidden="true"></i>Edit
               </li>
-              
-              <li className="flex items-center gap-3 text-red-500" onClick={handleDelete}>
+
+              <li
+                className="flex items-center gap-3 text-red-500"
+                onClick={handleDelete}
+              >
                 <i class="fa fa-trash" aria-hidden="true"></i>Delete
               </li>
             </ul>
@@ -118,16 +120,16 @@ export function PostCard({ post }) {
         <div className="mt-3">
           <p>{post?.content}</p>
 
-          {post?.mediaUrl &&
-            (post?.mediaUrl.split("/")[4] === "image" ? (
+          {post?.mediaURL &&
+            (post?.mediaURL.split("/")[4] === "image" ? (
               <img
-                src={post?.mediaUrl}
+                src={post?.mediaURL}
                 alt={"image"}
-                className="mx-auto my-2"
+                className="mx-auto my-2 w-full h-[70%]"
               />
             ) : (
               <video controls>
-                <source src={post?.mediaUrl} type="video/mp4" preload="auto" />
+                <source src={post?.mediaURL} type="video/mp4" preload="auto" />
               </video>
             ))}
         </div>
