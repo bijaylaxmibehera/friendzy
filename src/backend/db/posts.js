@@ -124,8 +124,8 @@ export const posts = [
     username: 'shruti',
     profileAvatar:
     'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/aurora.jpg',
-    createdAt: formatDate(),
-    updatedAt: formatDate(),
+    createdAt: "2023-05-15T01:05:00+05:30",
+    updatedAt: "2023-06-15T01:05:00+05:30",
     comments: [
       {
         _id:"42f410a1-2fb9-4fab-85b7-063cc4121239",
@@ -154,8 +154,8 @@ export const posts = [
     username: 'suman',
     profileAvatar:
     'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/Scarlett.jpg',
-    createdAt: formatDate(),
-    updatedAt: formatDate(),
+    createdAt: "2023-02-15T01:05:00+05:30",
+    updatedAt: "2023-03-15T01:07:00+05:30",
     comments: []
   },
  

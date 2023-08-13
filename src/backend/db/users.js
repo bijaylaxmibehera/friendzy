@@ -30,43 +30,8 @@ export const users = [
     location: 'India',
     createdAt: formatDate(),
     updatedAt: formatDate(),
-    followers: [
-      {
-        _id: uuid(),
-        firstName: 'Suman',
-        lastName: 'Mishra',
-        username: 'suman',
-        profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
-      },
-      {
-        _id: uuid(),
-        firstName: 'Subhalaxmi',
-        lastName: 'Behera',
-        username: 'subhalaxmi',
-        profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
-      },
-      {
-        _id: uuid(),
-        firstName: 'Shruti',
-        lastName: 'Sharma',
-        username: 'shruti',
-        profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
-      }
-      
-    ],
-    following: [
-      {
-        _id: uuid(),
-        firstName: 'Sophia',
-        lastName: 'Johnson',
-        username: 'sophia',
-        profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/sophia.jpg'
-      }
-    ],
+    followers: [],
+    following: [],
     bookmark: []
   },
   {

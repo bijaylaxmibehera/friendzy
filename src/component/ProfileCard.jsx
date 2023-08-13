@@ -69,8 +69,12 @@ export function ProfileCard({ user, totalPosts }) {
           <hr className="my-2" />
           <div className="flex gap-2 font-semibold">
             <h2>{totalPosts} posts</h2>
-            <h2>Followers</h2>
-            <h2>Following</h2>
+            <h2 className="cursor-pointer relative">
+              {user.followers.length} Followers
+            </h2>
+            <h2 className="cursor-pointer relative">
+              {user.following.length} Following
+            </h2>
           </div>
         </div>
       </div>

@@ -24,11 +24,6 @@ export function PostCard({ post }) {
     mediaURL,
     likes,
     username,
-    createdAt,
-    comments,
-    profileAvatar,
-    firstName,
-    lastName,
   } = post;
   const location = useLocation();
   const { users, bookmarks, userDispatch } = useUser();
@@ -113,7 +108,6 @@ export function PostCard({ post }) {
                     {getTimeAndDate(post?.createdAt)}
                   </span>
                 </div>
-
                 <p class="text-sm text-slate-500 truncate">@{username}</p>
               </div>
             </Link>

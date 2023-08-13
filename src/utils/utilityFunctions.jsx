@@ -111,19 +111,19 @@ export const uploadMedia = async (media, setPostData) => {
 //   }
 // };
 
-export const getPostsBySortingType = (allPosts, sortBy) => {
+export const getPostsBySortingType = (userFeed, sortBy) => {
 
 	if (sortBy === "Latest") {
-		return [...allPosts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+		return [...userFeed].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 	}
 
 	if (sortBy === "Oldest") {
-		return [...allPosts].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+		return [...userFeed].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
 	}
 
 	if (sortBy === "Trending") {
-		return [...allPosts].sort((a, b) => b.likes.likeCount - a.likes.likeCount);
+		return [...userFeed].sort((a, b) => b.likes.likeCount - a.likes.likeCount);
 	}
 
-	return allPosts;
+	return userFeed;
 }
