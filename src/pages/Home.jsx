@@ -38,7 +38,7 @@ export function Home() {
             <div className="col-span-1">
               <LeftNav className="h-screen fixed top-0 left-0" />
             </div>
-            <div className="col-span-3 border-x-2 border-black min-h-screen overflow-y">
+            <div className="col-span-3  min-h-screen overflow-y">
               <h1 className="font-bold text-2xl text-center my-4">Home</h1>
               <CreatePost />
               {sortedPost.length === 0 ? (

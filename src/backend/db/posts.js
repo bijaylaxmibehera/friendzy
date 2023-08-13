@@ -62,14 +62,14 @@ export const posts = [
           firstName:'Subhalaxmi',
           lastName:'Behera',
           username:'subhalaxmi',
-          profileAvatar:'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          profileAvatar:'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
         },
         {
           _id:"02e8bf4c-15ce-4df8-a476-c404e262c062",
           firstName:'Neha',
           lastName:'Sharma',
           username:'neha',
-          profileAvatar: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          profileAvatar: 'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
         }
       ]
     },
@@ -78,7 +78,7 @@ export const posts = [
     lastName: 'Behera',
     username: 'bijaylaxmi',
     profileAvatar:
-    'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg',
+    'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg',
     createdAt: formatDate(),
     updatedAt: formatDate(),
     comments: [
@@ -88,7 +88,7 @@ export const posts = [
         firstName: 'Neha',
         lastName: 'Sharma',
         username: 'neha',
-        profileAvatar: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg',
+        profileAvatar: 'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg',
         createdAt: formatDate(),
         updatedAt: formatDate()
       }
@@ -97,7 +97,7 @@ export const posts = [
   {
     _id:"c77a4756-8b87-4645-a86e-715f3e1c7005",
     content:" 🎉🖥️ Guess what, fam? I've got some exciting news to share! 🎉 Just unboxed my brand new laptop, and I'm absolutely thrilled! 💻✨🙌 This sleek and powerful machine ticks all the boxes on my wish list. It's got the speed, the storage, and the graphics to handle anything I throw at it! From work to play, this laptop is going to be my new best buddy. 🤩",
-    mediaURL: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_scale,h_530,w_700/macbook.jpg',
+    mediaURL: 'https://res.cloudinary.com/bijaylaxmi/image/upload/c_scale,h_530,w_700/macbook.jpg',
     altText: 'macbook',
     likes: {
       likeCount: 2,
@@ -107,14 +107,14 @@ export const posts = [
           firstName:'Subhalaxmi',
           lastName:'Behera',
           username:'subhalaxmi',
-          profileAvatar:'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          profileAvatar:'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
         },
         {
           _id:"d6a2d341-5389-4864-b7f3-de8ba704ef9f",
           firstName:'Neha',
           lastName:'Sharma',
           username:'neha',
-          profileAvatar: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          profileAvatar: 'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
         }
       ]
     },
@@ -123,7 +123,7 @@ export const posts = [
     lastName: 'Sharma',
     username: 'shruti',
     profileAvatar:
-    'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/aurora.jpg',
+    'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/aurora.jpg',
     createdAt: "2023-05-15T01:05:00+05:30",
     updatedAt: "2023-06-15T01:05:00+05:30",
     comments: [
@@ -133,7 +133,7 @@ export const posts = [
         firstName: 'Manisha',
         lastName: 'Panda',
         username: 'manisha',
-        profileAvatar: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_2.jpg',
+        profileAvatar: 'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_2.jpg',
         createdAt: formatDate(),
         updatedAt: formatDate()
       }
@@ -153,7 +153,7 @@ export const posts = [
     lastName: 'Mishra',
     username: 'suman',
     profileAvatar:
-    'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/Scarlett.jpg',
+    'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/Scarlett.jpg',
     createdAt: "2023-02-15T01:05:00+05:30",
     updatedAt: "2023-03-15T01:07:00+05:30",
     comments: []

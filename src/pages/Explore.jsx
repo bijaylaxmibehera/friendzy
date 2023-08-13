@@ -23,7 +23,7 @@ export function Explore() {
         <div className="col-span-1">
           <LeftNav className="h-screen fixed top-0 left-0" />
         </div>
-        <div className="col-span-3 border-x-2 border-black min-h-screen">
+        <div className="col-span-3  min-h-screen">
           <h1 className="font-bold text-2xl text-center my-4">Explore</h1>
 
           {explorePosts.map((post) => (

@@ -42,9 +42,9 @@ export const users = [
     password: 'scarlett',
     website: 'https://scarlett.netlify.app/',
     profileAvatar:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/Scarlett.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/Scarlett.jpg',
     cover:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/Scarlett.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/Scarlett.jpg',
     bio: 'Software developer',
     location: 'USA',
     createdAt: formatDate(),
@@ -56,7 +56,7 @@ export const users = [
         lastName: 'Anderson',
         username: 'isabella',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
       {
         _id: uuid(),
@@ -64,7 +64,7 @@ export const users = [
         lastName: 'Behera',
         username: 'subhalaxmi',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
       },
       {
         _id: uuid(),
@@ -72,7 +72,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'neha',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
     following: [
@@ -82,7 +82,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'shruti',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+          'https://res.cloudinary.com/bijaylaxmit/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
       {
         _id: uuid(),
@@ -90,7 +90,7 @@ export const users = [
         lastName: 'Behera',
         username: 'subhalaxmi',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
       },
       {
         _id: uuid(),
@@ -98,7 +98,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'neha',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
     bookmark: []
@@ -111,9 +111,9 @@ export const users = [
     password: 'aurora',
     website: 'https://aurora.netlify.app/',
     profileAvatar:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/aurora.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/aurora.jpg',
     cover:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/aurora.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/aurora.jpg',
     bio: 'Poet',
     location: 'Europe',
     createdAt: formatDate(),
@@ -125,7 +125,7 @@ export const users = [
         lastName: 'Anderson',
         username: 'isabella',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
       {
         _id: uuid(),
@@ -133,7 +133,7 @@ export const users = [
         lastName: 'Behera',
         username: 'subhalaxmi',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
       },
       {
         _id: uuid(),
@@ -141,7 +141,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'neha',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
     following: [
@@ -151,7 +151,7 @@ export const users = [
         lastName: 'Anderson',
         username: 'isabella',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
       {
         _id: uuid(),
@@ -159,7 +159,7 @@ export const users = [
         lastName: 'Behera',
         username: 'subhalaxmi',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
       },
       {
         _id: uuid(),
@@ -167,7 +167,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'neha',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
     bookmark: []
@@ -180,9 +180,9 @@ export const users = [
     password: 'lily',
     website: 'https://lily.netlify.app/',
     profileAvatar:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/lily.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/lily.jpg',
     cover:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/lily.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/lily.jpg',
     bio: 'Product Manager',
     location: 'India',
     createdAt: formatDate(),
@@ -194,7 +194,7 @@ export const users = [
         lastName: 'Anderson',
         username: 'isabella',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
       {
         _id: uuid(),
@@ -202,7 +202,7 @@ export const users = [
         lastName: 'Behera',
         username: 'subhalaxmi',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
       },
       {
         _id: uuid(),
@@ -210,7 +210,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'neha',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
     following: [
@@ -220,7 +220,7 @@ export const users = [
         lastName: 'Anderson',
         username: 'isabella',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
       {
         _id: uuid(),
@@ -228,7 +228,7 @@ export const users = [
         lastName: 'Behera',
         username: 'subhalaxmi',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
       },
       {
         _id: uuid(),
@@ -236,7 +236,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'neha',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
     bookmark: []
@@ -250,9 +250,9 @@ export const users = [
     website: '',
 
     profileAvatar:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/harry.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/harry.jpg',
     cover:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/harry.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/harry.jpg',
     bio: 'Photographer',
     location: 'India',
 
@@ -265,7 +265,7 @@ export const users = [
         lastName: 'Anderson',
         username: 'isabella',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
       {
         _id: uuid(),
@@ -273,7 +273,7 @@ export const users = [
         lastName: 'Behera',
         username: 'subhalaxmi',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
       },
       {
         _id: uuid(),
@@ -281,7 +281,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'neha',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
     following: [
@@ -291,7 +291,7 @@ export const users = [
         lastName: 'Anderson',
         username: 'isabella',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
       {
         _id: uuid(),
@@ -299,7 +299,7 @@ export const users = [
         lastName: 'Behera',
         username: 'subhalaxmi',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
       },
       {
         _id: uuid(),
@@ -307,7 +307,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'neha',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
     bookmark: []
@@ -320,9 +320,9 @@ export const users = [
     password: 'john',
     website: '',
     profileAvatar:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/john.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/john.jpg',
     cover:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/john.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/john.jpg',
     bio: 'Software developer',
     location: 'USA',
 
@@ -335,7 +335,7 @@ export const users = [
         lastName: 'Anderson',
         username: 'isabella',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
       {
         _id: uuid(),
@@ -343,7 +343,7 @@ export const users = [
         lastName: 'Behera',
         username: 'subhalaxmi',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
       },
       {
         _id: uuid(),
@@ -351,7 +351,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'neha',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
     following: [
@@ -361,7 +361,7 @@ export const users = [
         lastName: 'Anderson',
         username: 'isabella',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/isabella.jpg'
       },
       {
         _id: uuid(),
@@ -369,7 +369,7 @@ export const users = [
         lastName: 'Behera',
         username: 'subhalaxmi',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/subhalaxmi.jpg'
       },
       {
         _id: uuid(),
@@ -377,7 +377,7 @@ export const users = [
         lastName: 'Sharma',
         username: 'neha',
         profileAvatar:
-          'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
+          'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/pic_1.jpg'
       }
     ],
     bookmark: []
