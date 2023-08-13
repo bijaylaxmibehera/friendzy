@@ -23,9 +23,9 @@ export const users = [
     password: 'bijaylaxmi@098',
     website: 'https://bijaylaxmi-behera-portfolio.netlify.app/',
     profileAvatar:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg',
     cover:
-      'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg',
+      'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg',
     bio: 'web developer',
     location: 'India',
     createdAt: formatDate(),

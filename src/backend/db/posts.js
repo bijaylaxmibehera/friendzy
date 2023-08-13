@@ -44,7 +44,7 @@ export const posts = [
   {
     _id:"998197f6-0f0a-490f-b10e-b93607e00974",
     content: 'Peacock❤️',
-    mediaURL: 'https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,h_300,w_500/peacock_1.jpg',
+    mediaURL: 'https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,h_300,w_500/peacock_1.jpg',
     altText: 'peacock',
     likes: {
       likeCount: 2,
