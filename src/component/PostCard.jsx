@@ -16,22 +16,17 @@ import {
 } from "../services/UserService";
 import { Link, useLocation } from "react-router-dom";
 import { EditPostModal } from "../pages/EditPostModal";
+import axios from "axios";
 
 export function PostCard({ post }) {
-  const {
-    _id,
-    content,
-    mediaURL,
-    likes,
-    username,
-  } = post;
+  const { _id, content, mediaURL, likes, username } = post;
   const location = useLocation();
   const { users, bookmarks, userDispatch } = useUser();
   const { user: authUser, token } = useAuth();
   const { postDispatch, setShowModal } = usePost();
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
   const [showServices, setshowServices] = useState(false);
-  const [showEditPost,setShowEditPost]=useState(false)
+  const [showEditPost, setShowEditPost] = useState(false);
 
   const user = users.find((user) => user?.username === post?.username);
 
@@ -45,15 +40,23 @@ export function PostCard({ post }) {
 
   const isUserOnProfilePage = location.pathname === `/profile/${username}`;
 
-  const likeHandler = () => {
+  const likeHandler = async () => {
     // if (isLiked) {
     //   unlikePostService(postDispatch, setIsBtnDisabled, token,_id);
     // } else {
     //   likePostService(postDispatch, setIsBtnDisabled, token, _id);
     // }
-    
+    try {
+      const response = await axios({
+        method: "POST",
+        url: `/api/posts/like/${_id}`,
+        headers: { authorization: token },
+      });
+    } catch (err) {
+      console.error(err);
+    }
+   
   };
-
   const bookmarkHandler = () => {
     if (isBookmarked) {
       removePostFromBookmarkService(userDispatch, setIsBtnDisabled, token, _id);
@@ -128,10 +131,17 @@ export function PostCard({ post }) {
           )}
           {showServices && (
             <ul className="absolute bg-white shadow-lg right-10 top-10 text-left list-none py-4 px-6 rounded-md gap-4  cursor-pointer ">
-              <li className="flex items-center gap-2 hover:text-red-500" onClick={()=>setShowEditPost(true)}>
+              <li
+                className="flex items-center gap-2 hover:text-red-500"
+                onClick={() => setShowEditPost(true)}
+              >
                 <i className="fa fa-pencil-square-o" aria-hidden="true"></i>Edit
               </li>
-              <EditPostModal postDetails={post} setShowEditPost={setShowEditPost} showEditPost={showEditPost}/>
+              <EditPostModal
+                postDetails={post}
+                setShowEditPost={setShowEditPost}
+                showEditPost={showEditPost}
+              />
               <li
                 className="flex items-center gap-3 text-red-500"
                 onClick={handleDelete}
@@ -159,14 +169,15 @@ export function PostCard({ post }) {
         </div>
         <hr className="my-4 border-t-2" />
         <div className="flex items-center gap-4">
-          <button onClick={() => likeHandler()} isDisabled={isBtnDisabled}>
-            {isLiked ? (
+          <button onClick={() => likeHandler()}>
+            {/* {isLiked ? (
               <i className="fa fa-heart mr-2" aria-hidden="true"></i>
             ) : (
               <i className="fa fa-heart-o mr-2" aria-hidden="true"></i>
-            )}
+            )} */}
 
             {likes.likeCount}
+            <i className="fa fa-heart-o mr-2" aria-hidden="true"></i>
           </button>
 
           <button onClick={() => bookmarkHandler()}>

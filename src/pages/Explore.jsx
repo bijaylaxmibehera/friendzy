@@ -5,9 +5,10 @@ import { usePost } from "../context/PostContext";
 import { Card } from "../component/Card";
 import { PostCard } from "../component/PostCard";
 import { useAuth } from "../context/AuthContext";
+import { SortBar } from "../component/SortBar";
 
 export function Explore() {
-  const { posts } = usePost();
+  const { posts,postDispatch,sortBy } = usePost();
   const { user } = useAuth();
 
   const explorePosts = posts.filter((post) => {
@@ -25,7 +26,7 @@ export function Explore() {
         </div>
         <div className="col-span-3  min-h-screen">
           <h1 className="font-bold text-2xl text-center my-4">Explore</h1>
-
+           <SortBar type={sortBy} setSortBy={postDispatch}/>
           {explorePosts.map((post) => (
             <Card key={post._id}>
               <PostCard post={post} />

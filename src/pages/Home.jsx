@@ -8,7 +8,6 @@ import { useAuth } from "../context/AuthContext";
 import { PostCard } from "../component/PostCard";
 import { CreatePost } from "../component/CreatePost";
 import { getPostsBySortingType } from "../utils/utilityFunctions";
-import { SortBar } from "../component/SortBar";
 
 export function Home() {
   const { isLoading, posts, sortBy, postDispatch } = usePost();
@@ -45,7 +44,6 @@ export function Home() {
                 <h2>Follow people</h2>
               ) : (
                 <div>
-                  <SortBar sortBy={sortBy} setSortBy={postDispatch}/>
                   {sortedPost.map((userFeedPosts) => (
                     <Card>
                       <PostCard post={userFeedPosts} key={userFeedPosts._id} />
