@@ -22,7 +22,7 @@ export function MobileNav() {
   )
   return (
     <>
-      <nav className="flex justify-between items-center w-[95vw] mx-auto p-3 text-xl">
+      <nav className="flex justify-between items-center w-[95vw] mx-auto p-3 text-xl bg-white">
         <NavLink to="/" style={getStyle}>
           <i class="fa fa-home" aria-hidden="true"></i>
         </NavLink>
