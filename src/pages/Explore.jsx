@@ -5,16 +5,36 @@ import { usePost } from "../context/PostContext";
 import { Card } from "../component/Card";
 import { PostCard } from "../component/PostCard";
 import { useAuth } from "../context/AuthContext";
-import { SortBar } from "../component/SortBar";
+import { getPostsBySortingType } from "../utils/utilityFunctions";
+import { useState } from "react";
 
 export function Explore() {
-  const { posts,postDispatch,sortBy } = usePost();
+  const { posts } = usePost();
   const { user } = useAuth();
+  const [sortedPosts, setSortedPosts] = useState([]);
+  const [activeSortingType, setActiveSortingType] = useState("");
 
   const explorePosts = posts.filter((post) => {
     return post.username !== user.username;
   });
 
+  const showLatestPost = () => {
+    const latestPost = getPostsBySortingType(explorePosts, "Latest");
+    setSortedPosts(latestPost);
+    setActiveSortingType("Latest");
+  };
+
+  const showTrendingPost = () => {
+    const trendingPosts = getPostsBySortingType(explorePosts, "Trending");
+    setSortedPosts(trendingPosts);
+    setActiveSortingType("Trending");
+  };
+
+  const showOldestPost = () => {
+    const oldestPosts = getPostsBySortingType(explorePosts, "Oldest");
+    setSortedPosts(oldestPosts);
+    setActiveSortingType("Oldest");
+  };
   return (
     <>
       <div>
@@ -26,8 +46,39 @@ export function Explore() {
         </div>
         <div className="col-span-3  min-h-screen">
           <h1 className="font-bold text-2xl text-center my-4">Explore</h1>
-           <SortBar type={sortBy} setSortBy={postDispatch}/>
-          {explorePosts.map((post) => (
+          <div className="flex gap-4 items-center w-[80%] m-auto">
+            <button
+              onClick={showLatestPost}
+              className={`border-2 px-3 py-1 rounded-md text-slate-600 font-semibold ${
+                activeSortingType === "Latest"
+                  ? "border-red-500 text-red-500"
+                  : ""
+              }`}
+            >
+              Latest
+            </button>
+            <button
+              onClick={showTrendingPost}
+              className={`border-2 px-3 py-1 rounded-md text-slate-600 font-semibold ${
+                activeSortingType === "Trending"
+                  ? "border-red-500 text-red-500"
+                  : ""
+              }`}
+            >
+              Trending
+            </button>
+            <button
+              onClick={showOldestPost}
+              className={`border-2 px-3 py-1 rounded-md text-slate-600 font-semibold ${
+                activeSortingType === "Oldest"
+                  ? "border-red-500 text-red-500"
+                  : ""
+              }`}
+            >
+              Oldest
+            </button>
+          </div>
+          {sortedPosts?.map((post) => (
             <Card key={post._id}>
               <PostCard post={post} />
             </Card>

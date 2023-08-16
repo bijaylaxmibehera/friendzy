@@ -10,7 +10,7 @@ import { CreatePost } from "../component/CreatePost";
 import { getPostsBySortingType } from "../utils/utilityFunctions";
 
 export function Home() {
-  const { isLoading, posts, sortBy, postDispatch } = usePost();
+  const { isLoading, posts, sortBy} = usePost();
   const { user } = useAuth();
 
   const userFeed = posts?.filter((post) => {
