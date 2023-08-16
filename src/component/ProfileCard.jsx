@@ -28,8 +28,8 @@ export function ProfileCard({ user, totalPosts }) {
   return (
     <>
       {showEditModal && (<EditProfileModal user={authUser} setShowEditModal={setShowEditModal} showEditModal={showEditModal}/>)}
-      <div className="w-[90%] mx-auto px-3">
-        <div className="flex items-center">
+      <div className="md:w-[90%] mx-auto px-3">
+        <div className="flex md:items-center flex-col md:flex-row gap-4 md:gap-0">
           <div className="flex gap-3 items-center">
             <img
               src={user.profileAvatar}
@@ -43,7 +43,7 @@ export function ProfileCard({ user, totalPosts }) {
               <p>@{user.username}</p>
             </div>
           </div>
-          <div className="grow text-right">
+          <div className="md:grow md:text-right">
             {isAuthUser ? (
               <button className="bg-blue-500 text-white font-semibold text-lg px-3 py-1 rounded-md" onClick={()=>setShowEditModal(!showEditModal)}>
                 <i className="fa fa-cog mr-2" aria-hidden="true"></i>

@@ -59,7 +59,7 @@ export function EditProfileModal({ user, setShowEditModal, showEditModal }) {
         onClose={() => setShowEditModal(false)}
         className="overflow-y-auto"
       >
-        <div className="bg-white shadow-lg w-[40vw] mx-auto my-8">
+        <div className="bg-white shadow-lg md:w-[40vw] mx-auto my-8 w-[95vw]">
           <div className="my-3 flex justify-between items-center pt-4 px-8">
             <h1 className="font-bold text-xl">Edit Profile</h1>
 

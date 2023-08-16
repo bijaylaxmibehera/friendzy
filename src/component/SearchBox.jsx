@@ -57,7 +57,7 @@ export function SearchBox() {
           <i className="fa fa-search cursor-pointer" aria-hidden="true"></i>
         </div>
         {showSearchResult && (
-          <div className="bg-white rounded-md px-5 absolute mt-10 ml-10 w-[30vw] overflow-y-auto">
+          <div className="bg-white rounded-md px-5 absolute mt-10 md:ml-10 md:w-[30vw] overflow-y-auto w-[70vw] -left-20 md:-left-0">
             {searchedUser.length > 0 ? (
               <>
                 {" "}

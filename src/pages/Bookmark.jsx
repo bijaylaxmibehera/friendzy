@@ -5,6 +5,7 @@ import { useUser } from "../context/UserContext";
 import { usePost } from "../context/PostContext";
 import { Card } from "../component/Card";
 import { PostCard } from "../component/PostCard";
+import { MobileNav } from "../component/MobileNav";
 
 export function Bookmark() {
   const { bookmarks } = useUser();
@@ -19,8 +20,8 @@ export function Bookmark() {
       <div>
         <NavBar />
       </div>
-      <div className="grid grid-cols-5 gap-2 pt-16 pl-3">
-        <div className="col-span-1">
+      <div className="grid md:grid-cols-5 gap-2 pt-16 pl-3">
+        <div className="md:col-span-1 hidden md:block">
           <LeftNav className="h-screen fixed top-0 left-0" />
         </div>
         <div className="col-span-3 min-h-screen">
@@ -36,9 +37,12 @@ export function Bookmark() {
               ))}
             </div>
           )}
+          <div className="md:hidden fixed bottom-0">
+                <MobileNav/>
+              </div>
         </div>
 
-        <div className="col-span-1">
+        <div className="md:col-span-1 hidden md:block">
           <RightNav />
         </div>
       </div>

@@ -8,6 +8,7 @@ import { useAuth } from "../context/AuthContext";
 import { PostCard } from "../component/PostCard";
 import { CreatePost } from "../component/CreatePost";
 import { getPostsBySortingType } from "../utils/utilityFunctions";
+import { MobileNav } from "../component/MobileNav";
 
 export function Home() {
   const { isLoading, posts, sortBy} = usePost();
@@ -33,11 +34,11 @@ export function Home() {
           <div>
             <NavBar />
           </div>
-          <div className="grid grid-cols-5 gap-2 pt-16 pl-3">
-            <div className="col-span-1">
+          <div className="grid md:grid-cols-5 gap-2 pt-16 pl-3">
+            <div className="md:col-span-1 hidden md:block">
               <LeftNav className="h-screen fixed top-0 left-0" />
             </div>
-            <div className="col-span-3  min-h-screen overflow-y">
+            <div className="md:col-span-3  min-h-screen overflow-y">
               <h1 className="font-bold text-2xl text-center my-4">Home</h1>
               <CreatePost />
               {sortedPost.length === 0 ? (
@@ -51,9 +52,12 @@ export function Home() {
                   ))}
                 </div>
               )}
+              <div className="md:hidden fixed bottom-0">
+                <MobileNav/>
+              </div>
             </div>
-
-            <div className="col-span-1">
+          
+            <div className="md:col-span-1 hidden md:block">
               <RightNav />
             </div>
           </div>

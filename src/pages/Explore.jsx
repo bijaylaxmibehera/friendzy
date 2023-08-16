@@ -7,6 +7,7 @@ import { PostCard } from "../component/PostCard";
 import { useAuth } from "../context/AuthContext";
 import { getPostsBySortingType } from "../utils/utilityFunctions";
 import { useState } from "react";
+import { MobileNav } from "../component/MobileNav";
 
 export function Explore() {
   const { posts } = usePost();
@@ -40,11 +41,11 @@ export function Explore() {
       <div>
         <NavBar />
       </div>
-      <div className="grid grid-cols-5 gap-2 pt-16 pl-3">
-        <div className="col-span-1">
+      <div className="grid md:grid-cols-5 gap-2 pt-16 pl-3">
+        <div className="md:col-span-1 hidden md:block">
           <LeftNav className="h-screen fixed top-0 left-0" />
         </div>
-        <div className="col-span-3  min-h-screen">
+        <div className="md:col-span-3  min-h-screen">
           <h1 className="font-bold text-2xl text-center my-4">Explore</h1>
           <div className="flex gap-4 items-center w-[80%] m-auto">
             <button
@@ -83,9 +84,12 @@ export function Explore() {
               <PostCard post={post} />
             </Card>
           ))}
+          <div className="md:hidden fixed bottom-0">
+            <MobileNav />
+          </div>
         </div>
 
-        <div className="col-span-1">
+        <div className="md:col-span-1 hidden md:block">
           <RightNav />
         </div>
       </div>
