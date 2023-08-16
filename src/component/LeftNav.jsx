@@ -1,5 +1,4 @@
-import { NavLink, useParams } from "react-router-dom";
-import { useState } from "react";
+import { NavLink} from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { usePost } from "../context/PostContext";
 import { useNavigate } from "react-router-dom";

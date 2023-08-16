@@ -6,11 +6,13 @@ import {
   unFollowUserService,
 } from "../services/UserService";
 import { Link } from "react-router-dom";
+import { EditProfileModal } from "./EditProfileModal";
 
 export function ProfileCard({ user, totalPosts }) {
-  const { user: authUser, setToken, token, setUser } = useAuth();
-  const { isBtnDisabled, setIsBtnDisabled, userDispatch } = useUser();
+  const { user: authUser,token, setUser } = useAuth();
+  const { setIsBtnDisabled, userDispatch } = useUser();
   const isAuthUser = authUser?.username === user?.username;
+  const [showEditModal,setShowEditModal]=useState(false);
 
   const isUserFollowed = authUser?.following?.some(({ username }) => {
     return username === user?.username;
@@ -25,6 +27,7 @@ export function ProfileCard({ user, totalPosts }) {
   };
   return (
     <>
+      {showEditModal && (<EditProfileModal user={authUser} setShowEditModal={setShowEditModal} showEditModal={showEditModal}/>)}
       <div className="w-[90%] mx-auto px-3">
         <div className="flex items-center">
           <div className="flex gap-3 items-center">
@@ -42,7 +45,7 @@ export function ProfileCard({ user, totalPosts }) {
           </div>
           <div className="grow text-right">
             {isAuthUser ? (
-              <button className="bg-blue-500 text-white font-semibold text-lg px-3 py-1 rounded-md">
+              <button className="bg-blue-500 text-white font-semibold text-lg px-3 py-1 rounded-md" onClick={()=>setShowEditModal(!showEditModal)}>
                 <i className="fa fa-cog mr-2" aria-hidden="true"></i>
                 Edit profile
               </button>

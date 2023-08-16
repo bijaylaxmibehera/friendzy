@@ -58,7 +58,7 @@ export function Signup() {
       password: "",
       username: "",
       profileAvatar:
-        "https://res.cloudinary.com/dwcoxmoat/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg",
+        "https://res.cloudinary.com/bijaylaxmi/image/upload/c_fill,g_face,h_300,w_300/f_png/r_max/bijaylaxmi.jpg",
     });
   };
   return (
@@ -81,7 +81,7 @@ export function Signup() {
                   id="first-name"
                   value={userSignupDetails.firstName}
                   placeholder="Bijaylaxmi"
-                  className="mb-6 border border-solid border-gray-600 rounded text-xs p-2 w-full dark:bg-dark-mode"
+                  className="mb-6 border border-solid border-gray-600 rounded text-xs p-2 w-full"
                   onChange={(e) =>
                     setUserSignupDetails((prev) => ({
                       ...prev,
@@ -100,7 +100,7 @@ export function Signup() {
                   id="last-name"
                   value={userSignupDetails.lastName}
                   placeholder="Behera"
-                  className="mb-6 border border-solid border-gray-600 rounded text-xs p-2 w-full dark:bg-dark-mode"
+                  className="mb-6 border border-solid border-gray-600 rounded text-xs p-2 w-full"
                   onChange={(e) =>
                     setUserSignupDetails((prev) => ({
                       ...prev,
@@ -120,7 +120,7 @@ export function Signup() {
               id="email"
               value={userSignupDetails.email}
               placeholder="bijaylaxmi@friendzy.com"
-              className="mb-6 border border-solid border-gray-600 rounded text-xs p-2 w-full dark:bg-dark-mode"
+              className="mb-6 border border-solid border-gray-600 rounded text-xs p-2 w-full"
               onChange={(e) =>
                 setUserSignupDetails((prev) => ({
                   ...prev,
@@ -138,7 +138,7 @@ export function Signup() {
               id="username"
               value={userSignupDetails.username}
               placeholder="bijaylaxmi"
-              className="mb-6 border border-solid border-gray-600 rounded text-xs p-2 w-full dark:bg-dark-mode"
+              className="mb-6 border border-solid border-gray-600 rounded text-xs p-2 w-full"
               onChange={(e) =>
                 setUserSignupDetails((prev) => ({
                   ...prev,
@@ -157,7 +157,7 @@ export function Signup() {
               id="password"
               value={userSignupDetails.password}
               placeholder="password"
-              className="mb-6 w-full border border-solid border-gray-600 rounded text-xs p-2 dark:bg-dark-mode relative"
+              className="mb-6 w-full border border-solid border-gray-600 rounded text-xs p-2  relative"
               onChange={(e) =>
                 setUserSignupDetails((prev) => ({
                   ...prev,
@@ -166,14 +166,14 @@ export function Signup() {
               }
             />
             {showPassword ?  (
-              <i class="fa fa-eye cursor-pointer mt-2 absolute    right-[25vw] sm:right-[30vw] md:right-[35vw] lg:right-[40.1vw]" aria-hidden="true" onClick={()=>setShowPassword((prev) => !prev)}></i>
+              <i class="fa fa-eye cursor-pointer mt-2 absolute right-[25vw] sm:right-[30vw] md:right-[35vw] lg:right-[40.1vw]" aria-hidden="true" onClick={()=>setShowPassword((prev) => !prev)}></i>
             ) : (
                 <i class="fa fa-eye-slash cursor-pointer mt-2 absolute  right-[25vw] sm:right-[30vw]  md:right-[35vw] lg:right-[40.1vw] " aria-hidden="true" onClick={()=>setShowPassword((prev) => !prev)}></i>
             )}
 
             <button
               type="submit"
-              className="mb-3 w-full py-2 cursor-pointer text-md bg-red-500 text-white hover:bg-primary-dark hover:transition-colors hover:duration-200 hover:ease-in-out"
+              className="mb-3 w-full py-2 cursor-pointer text-md bg-red-500 text-white hover:transition-colors hover:duration-200 hover:ease-in-out"
             >
               <p>Create New Account</p>
             </button>
